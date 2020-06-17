@@ -1,4 +1,4 @@
-
+import {users} from './users.js'
 // 1.- Obtener el elemento que quiero insertar en HTML
 // 2.- Generar la estructura de HTML
 // 3.- Insertar el HTML generado
