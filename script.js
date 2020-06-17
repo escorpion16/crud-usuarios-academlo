@@ -56,5 +56,22 @@ function printUser(){
     })
 }
 
+function addUser(){
+    const name =  document.querySelector('#name').value
+    const lastname = document.querySelector('#lastname').value
+    const email =  document.querySelector('#email').value
+
+    const tableBody = document.querySelector('tbody')
+    const newUser = {
+        name: name,
+        lastname: lastname,
+        email: email
+    }
+    usersAcademlo.unshift(newUser)
+    console.log(usersAcademlo)
+    tableBody.innerHTML += newUser
+
+}
+
 printUser()
-// window.addUser = addUser
+window.addUser = addUser
