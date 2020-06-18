@@ -89,6 +89,20 @@ function filterByEmail(){
     printUsers(emailAcademlo)
 }
 
+// Sort
+function orderUsers(){
+    const senseOfOrder = document.querySelector('#senseOfOrder').value
+    const order = usersAcademlo.sort((user1, user2) => {
+        if(senseOfOrder == 'up'){
+            return (user1.name.toLowerCase() < user2.name.toLowerCase()) ? -1 : 1
+        }else if(senseOfOrder == 'down'){
+            return (user1.name.toLowerCase() > user2.name.toLowerCase()) ? -1 : 1
+        }
+        
+    })
+    console.log(order)
+    printUsers(order)
+}
 
 
 printUsers(usersAcademlo)
@@ -96,3 +110,4 @@ printUsers(usersAcademlo)
 window.addUser = addUser
 window.filterByGender = filterByGender
 window.filterByEmail = filterByEmail
+window.orderUsers = orderUsers

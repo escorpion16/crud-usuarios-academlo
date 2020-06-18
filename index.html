@@ -46,6 +46,15 @@
         <button onclick="filterByGender('male')" type="submit" class="btn btn-primary" id="male">Filtrar Hombres</button>
         <button onclick="filterByGender('female')" type="submit" class="btn btn-primary" id="female">Filtrar Mujeres</button>
         <button onclick="filterByEmail()" class="btn btn-primary" type="submit" id="filterEmail">Filtrar email Academlo</button>
+        <hr>
+        <div class="form-group">
+            <label for="senseOfOrder">Ordenar usuarios</label>
+            <select onchange="orderUsers()" class="form-control" id="senseOfOrder">
+                <option>Elige como ordenar..</option>
+                <option value="up">Ascendente</option>
+                <option value="down">Descendente</option>
+            </select>
+        </div>
         <table class="table table-bordered">
             <thead>
                 <tr>
