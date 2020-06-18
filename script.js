@@ -61,10 +61,12 @@ function addUser(){
     const name =  document.querySelector('#name').value
     const lastname = document.querySelector('#lastname').value
     const email =  document.querySelector('#email').value
+    const gender = document.querySelector('#gender').value
     const newUser = {
         name: name,
         lastname: lastname,
-        email: email
+        email: email,
+        gender: gender
     }
     usersAcademlo.unshift(newUser)
     printUsers(usersAcademlo)
