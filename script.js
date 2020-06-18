@@ -83,6 +83,7 @@ function addUser(){
 
 }
 
+// limpiar los inputs despues de ingresar los datos
 function voidInputs(){
     document.querySelector('#name').value = ''
     document.querySelector('#lastname').value = ''
