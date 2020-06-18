@@ -22,16 +22,17 @@
                 <input type="email" class="form-control" id="email">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">Example select</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+            <hr>
+            <button onclick="filterByGender('male')" type="submit" class="btn btn-primary" id="male">Filtrar Hombres</button>
+            <button onclick="filterByGender('female')" type="submit" class="btn btn-primary" id="female">Filtrar Mujeres</button>
+            <!-- <div class="form-group">
+                <label for="selectOptions"> Filtar por Género</label>
+                <select onchange="filterByGender()" class="form-control" id="selectOptions">
+                    <option>Elige el género</option>
+                    <option id="male">masculino</option>
+                    <option id="female">femenino</option>
                 </select>
-            </div>
+            </div> -->
         </form>
         <table class="table table-bordered">
             <thead>

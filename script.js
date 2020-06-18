@@ -44,8 +44,9 @@ import {usersAcademlo} from './users.js'
 
 // }
 
-function printUser(){
+function printUsers(){
     const tableBody = document.querySelector('tbody')
+    tableBody.innerHTML = ''
     usersAcademlo.forEach((user,index) => {
         tableBody.innerHTML += `<tr>
                                     <th scope="row">${index +1}</th>
@@ -60,18 +61,25 @@ function addUser(){
     const name =  document.querySelector('#name').value
     const lastname = document.querySelector('#lastname').value
     const email =  document.querySelector('#email').value
-
-    const tableBody = document.querySelector('tbody')
     const newUser = {
         name: name,
         lastname: lastname,
         email: email
     }
     usersAcademlo.unshift(newUser)
-    console.log(usersAcademlo)
-    tableBody.innerHTML += newUser
-
+    printUsers(usersAcademlo)
 }
 
-printUser()
+function filterByGender(filter){
+    const filterMale = document.querySelector('#male')
+    const filterFemale = document.querySelector('#female')
+    const filterByValue = usersAcademlo.filter((user) => {
+        return user.gender == filter
+    })
+    
+    printUsers(filterByValue)
+}
+printUsers(usersAcademlo)
+
+window.filterByGender = filterByGender
 window.addUser = addUser
