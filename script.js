@@ -53,6 +53,7 @@ function printUsers(users){
                                     <td>${user.name}</td>
                                     <td>${user.lastname}</td>
                                     <td>${user.email}</td>
+                                    <td>${user.age}</td>
                                     <td>
                                         <button onclick="removeUser(${index})" class="btn btn-danger">Eliminar</button>
                                     </td>
@@ -64,11 +65,13 @@ function addUser(){
     const name =  document.querySelector('#name').value
     const lastname = document.querySelector('#lastname').value
     const email =  document.querySelector('#email').value
+    const age = document.querySelector('#age').value
     const gender = document.querySelector('#gender').value
     const newUser = {
         name: name,
         lastname: lastname,
         email: email,
+        age: age,
         gender: gender
     }
     usersAcademlo.unshift(newUser)
@@ -115,6 +118,22 @@ function removeUser(indexUser){
     }
     
 // Funcion ordenar usuario por edad
+function ageUsers(){
+    // 
+    const orderByAge = document.getElementById('orderByAge').value
+    const orderUsersByAge = usersAcademlo.sort((user1,user2) => {
+        if(orderByAge == 'upAge'){
+            return (users1.age < user2.age) ? -1 : 1
+        }else if(orderByAge == 'downAge'){
+            return (users1.age > user2.age) ? -1 : 1
+        }
+    })
+    printUsers(orderUsersByAge)
+}
+
+
+
+
 printUsers(usersAcademlo)
 
 window.addUser = addUser
