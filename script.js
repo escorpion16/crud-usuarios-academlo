@@ -47,7 +47,7 @@ import {usersAcademlo} from './users.js'
 function printUsers(users){
     const tableBody = document.querySelector('tbody')
     tableBody.innerHTML = ''
-    usersAcademlo.forEach((user,index) => {
+    users.forEach((user,index) => {
         tableBody.innerHTML += `<tr>
                                     <th scope="row">${index +1}</th>
                                     <td>${user.name}</td>
