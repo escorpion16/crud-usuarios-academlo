@@ -44,7 +44,7 @@ import {usersAcademlo} from './users.js'
 
 // }
 
-function printUsers(){
+function printUsers(users){
     const tableBody = document.querySelector('tbody')
     tableBody.innerHTML = ''
     usersAcademlo.forEach((user,index) => {
@@ -71,15 +71,13 @@ function addUser(){
 }
 
 function filterByGender(filter){
-    const filterMale = document.querySelector('#male')
-    const filterFemale = document.querySelector('#female')
-    const filterByValue = usersAcademlo.filter((user) => {
+    const filterByValue = usersAcademlo.filter(function (user) {
         return user.gender == filter
     })
-    
+    console.log(filterByValue)
     printUsers(filterByValue)
 }
 printUsers(usersAcademlo)
 
-window.filterByGender = filterByGender
 window.addUser = addUser
+window.filterByGender = filterByGender

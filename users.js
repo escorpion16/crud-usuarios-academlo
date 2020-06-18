@@ -14,8 +14,8 @@ export const usersAcademlo = [
         email: 'oscar2@academlo.com',
         age: 29,
         gender: 'male'
-   },
-   {
+    },
+    {
         id: 3,
         name: 'Georg',
         lastname: 'Berger',
@@ -30,8 +30,8 @@ export const usersAcademlo = [
         email: 'luis@gmail.com',
         age: 26,
         gender: 'male'
-   },
-   {
+    },
+    {
         id: 5,
         name: 'Georg',
         lastname: 'Berger',
@@ -46,13 +46,13 @@ export const usersAcademlo = [
         email: 'oscar@academlo.com',
         age: 29,
         gender: 'male'
-   },
-   {
+    },
+    {
         id: 7,
         name: 'Daniela',
         lastname: 'Andrade',
         email: 'daniela@gmail.com',
         age: 15,
         gender: 'female'
-   }
+    }
 ]
