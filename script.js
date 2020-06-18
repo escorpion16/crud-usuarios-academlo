@@ -71,7 +71,7 @@ function addUser(){
     usersAcademlo.unshift(newUser)
     printUsers(usersAcademlo)
 }
-
+// Filter by gender
 function filterByGender(filter){
     const filterByValue = usersAcademlo.filter(function (user) {
         return user.gender == filter
@@ -79,7 +79,20 @@ function filterByGender(filter){
     console.log(filterByValue)
     printUsers(filterByValue)
 }
+
+// Filter by email
+function filterByEmail(){
+    const emailAcademlo = usersAcademlo.filter((user) => {
+        return user.email.endsWith('@academlo.com')
+    })
+    console.log(emailAcademlo)
+    printUsers(emailAcademlo)
+}
+
+
+
 printUsers(usersAcademlo)
 
 window.addUser = addUser
 window.filterByGender = filterByGender
+window.filterByEmail = filterByEmail
