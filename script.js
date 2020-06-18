@@ -96,9 +96,9 @@ function filterByEmail(){
 function orderUsers(){
     const senseOfOrder = document.querySelector('#senseOfOrder').value
     const order = usersAcademlo.sort((user1, user2) => {
-        if(senseOfOrder == 'up'){
+        if(senseOfOrder == 'upName'){
             return (user1.name.toLowerCase() < user2.name.toLowerCase()) ? -1 : 1
-        }else if(senseOfOrder == 'down'){
+        }else if(senseOfOrder == 'downName'){
             return (user1.name.toLowerCase() > user2.name.toLowerCase()) ? -1 : 1
         }
         
@@ -114,7 +114,7 @@ function removeUser(indexUser){
         printUsers(usersAcademlo)
     }
     
-
+// Funcion ordenar usuario por edad
 printUsers(usersAcademlo)
 
 window.addUser = addUser

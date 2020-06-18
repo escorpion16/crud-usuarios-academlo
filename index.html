@@ -22,6 +22,10 @@
                 <input type="email" class="form-control" id="email">
             </div>
             <div class="form-group">
+                <label for="age">Edad</label>
+                <input type="input" class="form-control" id="age">
+            </div>
+            <div class="form-group">
                 <label for="gender">Género</label>
                 <select class="form-control" id="gender">
                     <option>Selecciona tu género</option>
@@ -48,11 +52,20 @@
         <button onclick="filterByEmail()" class="btn btn-primary" type="submit" id="filterEmail">Filtrar email Academlo</button>
         <hr>
         <div class="form-group">
-            <label for="senseOfOrder">Ordenar usuarios</label>
+            <label for="senseOfOrder">Ordenar usuarios por nombre</label>
             <select onchange="orderUsers()" class="form-control" id="senseOfOrder">
                 <option>Elige como ordenar..</option>
-                <option value="up">Ascendente</option>
-                <option value="down">Descendente</option>
+                <option value="upName">Ascendente</option>
+                <option value="downName">Descendente</option>
+            </select>
+        </div>
+        <hr>
+        <div class="form-group">
+            <label for="orderByAge">Ordenar usuarios por Edad</label>
+            <select onchange="orderUsers()" class="form-control" id="orderByAge">
+                <option>Elige como ordenar..</option>
+                <option value="upAge">Ascendente</option>
+                <option value="downAge">Descendente</option>
             </select>
         </div>
         <table class="table table-bordered">
