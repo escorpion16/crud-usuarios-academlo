@@ -53,6 +53,9 @@ function printUsers(users){
                                     <td>${user.name}</td>
                                     <td>${user.lastname}</td>
                                     <td>${user.email}</td>
+                                    <td>
+                                        <button onclick="removeUser(${index})" class="btn btn-danger">Eliminar</button>
+                                    </td>
                                 </tr>`
     })
 }
@@ -104,6 +107,13 @@ function orderUsers(){
     printUsers(order)
 }
 
+// Eliminar usuario
+function removeUser(indexUser){
+        usersAcademlo.splice(indexUser,1) 
+        console.log("eliminar usuario del index ")
+        printUsers(usersAcademlo)
+    }
+    
 
 printUsers(usersAcademlo)
 
@@ -111,3 +121,4 @@ window.addUser = addUser
 window.filterByGender = filterByGender
 window.filterByEmail = filterByEmail
 window.orderUsers = orderUsers
+window.removeUser = removeUser
