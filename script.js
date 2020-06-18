@@ -82,7 +82,7 @@ function filterByGender(filter){
     const filterByValue = usersAcademlo.filter(function (user) {
         return user.gender == filter
     })
-    console.log(filterByValue)
+    
     printUsers(filterByValue)
 }
 
@@ -91,7 +91,7 @@ function filterByEmail(){
     const emailAcademlo = usersAcademlo.filter((user) => {
         return user.email.endsWith('@academlo.com')
     })
-    console.log(emailAcademlo)
+    
     printUsers(emailAcademlo)
 }
 
@@ -106,7 +106,7 @@ function orderUsers(){
         }
         
     })
-    console.log(order)
+    
     printUsers(order)
 }
 
@@ -123,16 +123,13 @@ function ageUsers(){
     const orderByAge = document.getElementById('orderByAge').value
     const orderUsersByAge = usersAcademlo.sort((user1,user2) => {
         if(orderByAge == 'upAge'){
-            return (users1.age < user2.age) ? -1 : 1
+            return (user1.age < user2.age) ? -1 : 1
         }else if(orderByAge == 'downAge'){
-            return (users1.age > user2.age) ? -1 : 1
+            return (user1.age > user2.age) ? -1 : 1
         }
     })
     printUsers(orderUsersByAge)
 }
-
-
-
 
 printUsers(usersAcademlo)
 
@@ -141,3 +138,4 @@ window.filterByGender = filterByGender
 window.filterByEmail = filterByEmail
 window.orderUsers = orderUsers
 window.removeUser = removeUser
+window.ageUsers = ageUsers
