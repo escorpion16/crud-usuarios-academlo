@@ -59,6 +59,7 @@ function printUsers(users){
                                     </td>
                                 </tr>`
     })
+    
 }
 
 function addUser(){
@@ -74,9 +75,24 @@ function addUser(){
         age: age,
         gender: gender
     }
+    
     usersAcademlo.unshift(newUser)
     printUsers(usersAcademlo)
+    voidInputs()
+
+
 }
+
+function voidInputs(){
+    document.querySelector('#name').value = ''
+    document.querySelector('#lastname').value = ''
+    document.querySelector('#email').value = ''
+    document.querySelector('#age').value = ''
+    document.querySelector('#gender').value = 'Selecciona tu género'
+    document.querySelector('#senseOfOrder').value = 'Elige como ordenar..'
+    document.querySelector('#orderByAge').value = 'Elige como ordenar..'
+}
+
 // Filter by gender
 function filterByGender(filter){
     const filterByValue = usersAcademlo.filter(function (user) {
